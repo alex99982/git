@@ -26,3 +26,4 @@ git commit -m "...." index.html закомитеть конкретный фай
 git rm i.gitignore = rm gitignore+ git add
 git rm  --cached i.gitignore удалить из индекса  не удалять из каталога
 
+git branch -v
