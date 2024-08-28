@@ -65,3 +65,7 @@ git merge fix                       (слияние)
 git checkout -B master fix
 
 git branch -f master ORIG_HEAD
+
+git branch -d fix (удаление)
+git branch -D feature (удаление принудительное если ветка не слита)
+git branch -b C2d5 (Востановление)
