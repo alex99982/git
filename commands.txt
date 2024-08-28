@@ -28,17 +28,14 @@ git rm  --cached i.gitignore удалить из индекса  не удаля
 
 git branch -v
 
-
-
 git branch feature : создать ветку
 
 git checkout -b feature : создать ветку и переключиться на нее
-
 git checkout -f feature : переключает на ветку не сохраняя измененные данные в другой ветке
 git checkout -f HEAD : очистить все изменения
 git stach : сохранить изменения чтоб можно было переключиться
 git stach pop  : восстановить измененые данные
-
+---------------------------------------------------------------------------
 git branch -f master  642ac75 : переместить master на коомит 642ac75
 git checkout -B master  642ac75 : переместить master на коомит 642ac75
 
@@ -46,9 +43,8 @@ git checkout c2452e5 commands.txt для просмотра файла в пре
 
 git checkout HEAD commands.txt возвращает фал из репозитория
 git checkout commands.txt возвращает фаил из индекса
-
+---------------------------------------------------------------------------------
 git log --oneline
-
 git show HEAD~~ посмотреть историю старых файлов(2 коммита назад)
 git show HEAD~4   (4 коммита назад)
 git show @~3      (3 коммита назад)
@@ -59,7 +55,7 @@ git show @~:command.txt
 
 git show :command.txt посмотреть что в индексе если поменя ли основной файл
 
-
+-----------------------------------------------------------------------------
 cat .git/ORIG_HEAD 
 git merge fix                       (слияние)
 git checkout -B master fix
@@ -68,4 +64,14 @@ git branch -f master ORIG_HEAD
 
 git branch -d fix (удаление)
 git branch -D feature (удаление принудительное если ветка не слита)
-git branch -b C2d5 (Востановление)
+git branch -b feature C2d5 (Востановление)
+
+------------------------------------------------------------------------------
+cat ./git/logs/HEAD
+git reflog master (история переключения веток)
+git reflog --date=iso
+
+git log --oneline -g
+git branch fix HEAD@{18} востановление ветки
+
+git checkout - (переход на прошлую ветку)
