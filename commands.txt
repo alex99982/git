@@ -27,3 +27,9 @@ git rm i.gitignore = rm gitignore+ git add
 git rm  --cached i.gitignore удалить из индекса  не удалять из каталога
 
 git branch -v
+
+
+
+git branch feature : создать ветку
+
+git checkout -b feature : создать ветку и переключиться на нее
