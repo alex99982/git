@@ -9,4 +9,8 @@ alias.c — определяет новый алиас с именем c.
 config — указывает, что алиас c будет выполнять команду git config.
 
 git init
+git status
+git add .
 
+git show --pretty=fuller
+git commit --author='Alexx' --date="..."
