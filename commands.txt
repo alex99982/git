@@ -1,0 +1,12 @@
+git config -h
+git config --list   : show config
+git config --system user.name "alex"
+
+git config  --global alias.c config
+-----------------------------------------
+git config --global — позволяет настроить параметры Git глобально, для всех репозиториев пользователя.
+alias.c — определяет новый алиас с именем c.
+config — указывает, что алиас c будет выполнять команду git config.
+
+git init
+
