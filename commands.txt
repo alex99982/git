@@ -92,3 +92,15 @@ git reset  @~   (workDir  Index+  Repo+)
 git reset --soft @~   (workDir  Index  Repo+)
 git add .
 git commit 
+
+---------------------------------6.1 Git – Просмотр – Сравнение коммитов, веток и не только: git diff-----------
+git diff                        (отличие workDir и Index)
+git diff @                      (отличие workDir и Repo)
+git diff --cached               (отличие Index и Repo)
+git diff @~1                    (отличие master и прошлый коммит)
+git diff fix                    (отличие master и fix)
+git diff fix1..fix              (отличие fix1 и fix)
+git diff fix1...fix             (отличие fix1 и fix и общего предка)
+git diff fix1:paht1 fix:path1   (отличие фйалов из коммитов)
+
+
