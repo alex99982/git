@@ -33,3 +33,9 @@ git branch -v
 git branch feature : создать ветку
 
 git checkout -b feature : создать ветку и переключиться на нее
+
+git checkout -f feature : переключает на ветку не сохраняя измененные данные в другой ветке
+git checkout -f HEAD : очистить все изменения
+git stach : сохранить изменения чтоб можно было переключиться
+git stach pop  : восстановить измененые данные
+ 
