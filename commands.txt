@@ -80,3 +80,15 @@ git checkout -f (востановить отслеживаемы фалы )
 git reset --hard
 
 git clean -dxf (удалить не отслеживаемы файлы)
+
+--------------------------------5.1 Git – Reset – Жесткий reset --hard: отмена изменений, удаление коммитов
+
+git reset --hard @~   (workDir+  Index+  Repo+)
+git reflog (4536 )
+git reset --hard 4536 
+
+git reset  @~   (workDir  Index+  Repo+)
+
+git reset --soft @~   (workDir  Index  Repo+)
+git add .
+git commit 
