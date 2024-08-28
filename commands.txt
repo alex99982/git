@@ -1,8 +1,12 @@
+(workin directory) -> (index)-> (repository)
+
 git config -h
 git config --list   : show config
 git config --system user.name "alex"
 
 git config  --global alias.c config
+
+git config  --global alias.commitall "git add .;git commit"
 -----------------------------------------
 git config --global — позволяет настроить параметры Git глобально, для всех репозиториев пользователя.
 alias.c — определяет новый алиас с именем c.
@@ -11,6 +15,14 @@ config — указывает, что алиас c будет выполнять
 git init
 git status
 git add .
+git add -f ./ == добавить все равно не смотря на 
 
 git show --pretty=fuller
 git commit --author='Alexx' --date="..."
+git commit -am "...."
+git commit -m "...." index.html закомитеть конкретный файл
+
+
+git rm i.gitignore = rm gitignore+ git add
+git rm  --cached i.gitignore удалить из индекса  не удалять из каталога
+
