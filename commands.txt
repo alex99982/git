@@ -58,3 +58,10 @@ git show master~3  (3 коммита назад)
 git show @~:command.txt
 
 git show :command.txt посмотреть что в индексе если поменя ли основной файл
+
+
+cat .git/ORIG_HEAD 
+git merge fix                       (слияние)
+git checkout -B master fix
+
+git branch -f master ORIG_HEAD
