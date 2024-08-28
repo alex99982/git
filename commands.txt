@@ -38,4 +38,5 @@ git checkout -f feature : переключает на ветку не сохра
 git checkout -f HEAD : очистить все изменения
 git stach : сохранить изменения чтоб можно было переключиться
 git stach pop  : восстановить измененые данные
- 
+
+git branch -f master  642ac75 : переместить master на коомит 642ac75
