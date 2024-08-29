@@ -103,4 +103,10 @@ git diff fix1..fix              (отличие fix1 и fix)
 git diff fix1...fix             (отличие fix1 и fix и общего предка)
 git diff fix1:paht1 fix:path1   (отличие фйалов из коммитов)
 
+6.2 Git – Просмотр – Вывод истории: git log, форматирование коммитов
 
+git log --pretty=format:"%h %ad | %s" --date=short
+git log master
+git log fix..master --oneline 
+git log --oneline commands.txt
+git log --grep  say
