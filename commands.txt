@@ -110,3 +110,27 @@ git log master
 git log fix..master --oneline 
 git log --oneline commands.txt
 git log --grep  say
+
+
+-----------------------------------7.1 Git – Слияние – "Истинное" слияние и разрешение конфликтов в git merge------
+(feature):ours (fix1):theirs  (05444):base (коммит где ветки разделились)
+git merge fix1
+
+(feature)  git merge-base fix1 (выводит коммит где ветки разделились)
+
+git checkout --ours index.html          (выбрать вариант из ветки feature)
+git checkout --theirs index.html        (выбрать вариант из ветки fix1)
+
+git checkout --merge index.html         (продолжить слияние)
+
+git reset --hard  (востановить)
+
+git reset --merge   (востанавливает фалы которые внесены в индекс но не трогает те фалы в директории которые были измененны но не проиндексированы)
+git merge --abort === git reset --merge
+
+git show :1:index.html посмотреть вариант общего предка
+git show :2:index.html посмотреть вариант текущей ветки  (feature)
+git show :3:index.html посмотреть вариант сливаемое ветки (fix1)
+
+git add index.html (добавить в индекс исправленный фариант после коммита)
+git commit или git merge --continue
