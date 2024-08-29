@@ -71,6 +71,8 @@ cat ./git/logs/HEAD
 git reflog master (история переключения веток)
 git reflog --date=iso
 
+git reflog -4 (последние 4 записи)
+
 git log --oneline -g
 git branch fix HEAD@{18} востановление ветки
 git checkout - (переход на прошлую ветку)
@@ -121,7 +123,7 @@ git merge fix1
 git checkout --ours index.html          (выбрать вариант из ветки feature)
 git checkout --theirs index.html        (выбрать вариант из ветки fix1)
 
-git checkout --merge index.html         (продолжить слияние)
+git checkout --merge index.html         (показывает вариает слияния и конфлик между ними)
 
 git reset --hard  (востановить)
 
@@ -134,3 +136,24 @@ git show :3:index.html посмотреть вариант сливаемое в
 
 git add index.html (добавить в индекс исправленный фариант после коммита)
 git commit или git merge --continue
+
+git show (показывает ветку предыдущего комита и коммит сливаемой ветки)  Merge: bd8e50c d5e4397
+git show --first-parent
+git diff
+git diff HEAD^ отличие от первого родителя (^используеться только при коммитах слияния)
+git diff @^2   отличие от второго родителя (^используеться только при коммитах слияния)
+git diff~ переход тольок по текущей ветки
+
+git branch --merge (показать ветки обединеные)
+git branch --no-merge (показать ветки обединеные не обедененные)
+
+git merge fix1 -m "comment to merge"
+
+git log --oneline --first-parent (коммиты только по основной ветке)
+
+отмена слияния 
+git reset --hard @~
+git branch -f feature @~
+------------ Слияние – Семантические конфликты и их разрешение
+git merge fix1 --no-commit   (слить ветки без коммита чтоб исправить файл)
+
