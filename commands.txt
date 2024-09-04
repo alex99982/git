@@ -180,3 +180,9 @@ cat ./git/ORIG_HEAD
 git reset --hard ORIG_HEAD
 git reflog  -10
 git show --quiet feature -1
+
+(feature)git rebase -x 'node script.js' master
+( fix)git rebase --onto master feature (переместить ветку fix(которая находиться на feature) на ветку master)
+git rebase --rebase-merges master  (при слиянии учитываються коммиты слияния на противоложных ветках)
+git rebase -i master (Интерактивное перебазирование)
+git rebase -i -autosquash master(Исправляем коммит посередине ветки: autosquash)
