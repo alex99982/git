@@ -28,36 +28,21 @@ git rm  --cached i.gitignore удалить из индекса  не удаля
 
 git branch -v
 
+
+
 git branch feature : создать ветку
 
 git checkout -b feature : создать ветку и переключиться на нее
+
 git checkout -f feature : переключает на ветку не сохраняя измененные данные в другой ветке
 git checkout -f HEAD : очистить все изменения
 git stach : сохранить изменени=я чтоб можно было переключиться
 git stach pop  : восстановить измененые данные
----------------------------------------------------------------------------
+
 git branch -f master  642ac75 : переместить master на коомит 642ac75
-git checkout -B master  642ac75 : переместить master на коомит 642ac75
 
-git checkout c2452e5 commands.txt для просмотра файла в предыдущей версии
-
-git checkout HEAD commands.txt возвращает фал из репозитория
-git checkout commands.txt возвращает фаил из индекса
----------------------------------------------------------------------------------
-git log --oneline
-git show HEAD~~ посмотреть историю старых файлов(2 коммита назад)
-git show HEAD~4   (4 коммита назад)
-git show @~3      (3 коммита назад)
-
-git show master~3  (3 коммита назад)
-
-git show @~:command.txt
-
-git show :command.txt посмотреть что в индексе если поменя ли основной файл
-
------------------------------------------------------------------------------
-cat .git/ORIG_HEAD 
-git merge fix                       (слияние)
+cat .git/ORIG_HEAD
+git merge fix
 git checkout -B master fix
 
 git branch -f master ORIG_HEAD
@@ -181,3 +166,17 @@ git cherry-pick --quit
 git reflog --no-decorate -3
 git reset --hard @~
 git reset --hard @~3
+
+
+//////////////////////9.1 Git – Перемещение коммитов – Перебазирование вместо слияния: rebase
+
+git rebase master 
+git rebase --abort
+git rebase --quit   (не возвращает HEAD) 
+git rebase --skip  (пропустить коммит) 
+git add .
+git rebase --continue
+cat ./git/ORIG_HEAD
+git reset --hard ORIG_HEAD
+git reflog  -10
+git show --quiet feature -1
